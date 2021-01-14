@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ExampleWidgetModule } from '@bbus/example-widget';
+import { ContainersModule } from '@backbase/universal-ang/containers';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ExampleWidgetModule } from '@bbus/example-widget';
     HttpClientModule,
     BackbaseCoreModule,
     RouterModule.forRoot([], { initialNavigation: false, useHash: true }),
-    ExampleWidgetModule
+    ExampleWidgetModule,
+		ContainersModule
   ],
   providers: [...environment.mockProviders || []],
   bootstrap: [AppComponent]

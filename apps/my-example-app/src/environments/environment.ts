@@ -10,12 +10,27 @@ const services: ExternalServices = {};
 const pageModel: Item = {
   name: 'app-container',
   properties: {},
-  children: [{
-      name: 'example-widget',
-      properties: {
-        classId: 'ExampleWidgetComponent'
-      }
-    }],
+  children: [
+		{
+			name: 'panel-111',
+			properties: {
+				classId: 'PanelContainerComponent',
+				cssClasses: 'd-block container my-5'
+			},
+			children: [
+				{
+					name: 'panel-222',
+					properties: {
+						classId: 'PanelContainerComponent',
+						cssClasses: 'd-block bg-primary py-5'
+					},
+					children: [
+
+					]
+				}
+			]
+		}
+	],
 };
 
 export const environment: Environment = {
