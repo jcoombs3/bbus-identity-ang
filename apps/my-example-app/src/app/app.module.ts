@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ExampleWidgetModule } from '@bbus/example-widget';
 import { ContainersModule } from '@backbase/universal-ang/containers';
+import { TransactionSigningModule, TransactionSigningWidgetModule } from '@backbase/identity-ang/transaction-signing';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { ContainersModule } from '@backbase/universal-ang/containers';
     BackbaseCoreModule,
     RouterModule.forRoot([], { initialNavigation: false, useHash: true }),
     ExampleWidgetModule,
-		ContainersModule
+		ContainersModule,
+		TransactionSigningModule.withConfig({
+			 useRedirectFlow: false,
+		}),
+		TransactionSigningWidgetModule
   ],
   providers: [...environment.mockProviders || []],
   bootstrap: [AppComponent]

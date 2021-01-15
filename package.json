@@ -35,6 +35,7 @@
 				"@backbase/flow-interaction-common-ang": "0.0.1",
 				"@backbase/flow-interaction-sdk-ang": "^2.0.0",
 				"@backbase/foundation-ang": "6.6.7",
+				"@backbase/identity-ang": "^3.8.0-sp.3",
 				"@backbase/notifications-mocks-provider-ang": "2.0.0",
 				"@backbase/retail-ang": "3.8.1",
 				"@backbase/ui-ang": "5.19.4",
